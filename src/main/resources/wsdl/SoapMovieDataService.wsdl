@@ -16,7 +16,7 @@
   </wsdl:binding>
   <wsdl:service name="movie-imdb">
     <wsdl:port name="SoapMovieDataServicePort" binding="tns:movie-imdbSoapBinding">
-      <soap:address location="http://localhost:8080/potzh_ws_feladat_war/ws/movie-imdb"/>
+      <soap:address location="http://localhost:8081/potzh_ws_feladat_war/ws/movie-imdb"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
