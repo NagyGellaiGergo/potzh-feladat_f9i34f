@@ -28,6 +28,7 @@
   <xs:complexType name="movieDataResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="id" type="xs:string"/>
+      <xs:element minOccurs="0" name="imdb" type="xs:long"/>
     </xs:sequence>
   </xs:complexType>
 
