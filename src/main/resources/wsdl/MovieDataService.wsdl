@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="MovieDataService" targetNamespace="http://ws.potzh.prog4.mik.pte.hu/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://ws.potzh.prog4.mik.pte.hu/">
+  <wsdl:types>
+<xs:schema xmlns:tns="http://ws.potzh.prog4.mik.pte.hu/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://ws.potzh.prog4.mik.pte.hu/" version="1.0">
+
+  <xs:element name="getMovieData" type="tns:getMovieData"/>
+
+  <xs:element name="getMovieDataResponse" type="tns:getMovieDataResponse"/>
+
+  <xs:complexType name="getMovieData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:movieDataRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="movieDataRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="movieId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMovieDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:movieDataResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="movieDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getMovieData">
+    <wsdl:part name="parameters" element="ns1:getMovieData">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMovieDataResponse">
+    <wsdl:part name="parameters" element="ns1:getMovieDataResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MovieDataService">
+    <wsdl:operation name="getMovieData">
+      <wsdl:input name="getMovieData" message="ns1:getMovieData">
+    </wsdl:input>
+      <wsdl:output name="getMovieDataResponse" message="ns1:getMovieDataResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
