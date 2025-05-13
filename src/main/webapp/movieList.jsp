@@ -16,7 +16,7 @@
                 <th>Cím</th>
                 <th>Rendező</th>
                 <th>Megjelenés éve</th>
-                <th>IMDb értékelés</th>
+                <th>IMDb</th>
             </tr>
             </thead>
             <tbody>
